@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PatiBul - Yasal Sayfalar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding: 40px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .logo {
+            font-size: 4em;
+            font-weight: bold;
+            color: #FFB5B5;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .subtitle {
+            color: #666;
+            font-size: 1.3em;
+            margin-bottom: 20px;
+        }
+        
+        .description {
+            color: #555;
+            font-size: 1.1em;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 3px solid transparent;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .card.privacy {
+            border-color: #A3D5FF;
+        }
+        
+        .card.terms {
+            border-color: #A59CD8;
+        }
+        
+        .card-icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        
+        .privacy .card-icon {
+            color: #A3D5FF;
+        }
+        
+        .terms .card-icon {
+            color: #A59CD8;
+        }
+        
+        .card h2 {
+            color: #2C2C2C;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+        
+        .card p {
+            color: #666;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #FFB5B5;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255, 181, 181, 0.3);
+        }
+        
+        .btn:hover {
+            background: #ff9b9b;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255, 181, 181, 0.4);
+        }
+        
+        .info-section {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+        
+        .info-section h2 {
+            color: #2C2C2C;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 1.8em;
+        }
+        
+        .info-section p {
+            color: #666;
+            text-align: center;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 40px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .footer p {
+            color: #666;
+            margin-bottom: 10px;
+        }
+        
+        .footer a {
+            color: #FFB5B5;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 15px;
+            }
+            
+            .header {
+                padding: 30px 20px;
+                margin-bottom: 40px;
+            }
+            
+            .logo {
+                font-size: 3em;
+            }
+            
+            .cards-container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .card {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">🐾 PatiBul</div>
+            <div class="subtitle">Evcil Hayvan Eşleştirme Platformu</div>
+            <div class="description">
+                Yasal belgelerimizi ve kullanım koşullarımızı buradan inceleyebilirsiniz. 
+                Uygulamamızı kullanarak bu belgeleri kabul etmiş sayılırsınız.
+            </div>
+        </div>
+
+        <div class="cards-container">
+            <div class="card privacy">
+                <div class="card-icon">🔒</div>
+                <h2>Gizlilik Politikası</h2>
+                <p>
+                    Kişisel verilerinizin nasıl toplandığını, kullanıldığını ve korunduğunu 
+                    detaylı olarak açıklayan gizlilik politikamızı inceleyin.
+                </p>
+                <a href="privacy.html" class="btn">Gizlilik Politikasını Oku</a>
+            </div>
+
+            <div class="card terms">
+                <div class="card-icon">📋</div>
+                <h2>Şartlar ve Koşullar</h2>
+                <p>
+                    Uygulamamızı kullanırken uymanız gereken kuralları ve yasal yükümlülükleri 
+                    içeren şartlar ve koşullarımızı okuyun.
+                </p>
+                <a href="terms.html" class="btn">Şartları ve Koşulları Oku</a>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <h2>📱 Uygulama Hakkında</h2>
+            <p>
+                PatiBul, evcil hayvan sahiplerinin birbirleriyle eşleşmesini sağlayan yenilikçi bir mobil uygulamadır. 
+                Evcil hayvanınız için en uygun arkadaşı bulmanıza yardımcı olur, güvenli mesajlaşma imkanı sunar 
+                ve kayıp evcil hayvan ilanları yayınlamanızı sağlar.
+            </p>
+        </div>
+
+        <div class="info-section">
+            <h2>⚖️ Yasal Uyumluluk</h2>
+            <p>
+                Uygulamamız, Türkiye Cumhuriyeti yasalarına ve KVKK (Kişisel Verilerin Korunması Kanunu) 
+                gerekliliklerine tam uyumlu olarak tasarlanmıştır. Kullanıcı haklarınızı korumak ve 
+                şeffaflık sağlamak için sürekli çalışıyoruz.
+            </p>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2024 PatiBul. Tüm hakları saklıdır.</p>
+            <p>
+                Bu yasal sayfalar <a href="https://pages.github.com/" target="_blank">GitHub Pages</a> 
+                üzerinde barındırılmaktadır.
+            </p>
+            <p>
+                Sorularınız için: <a href="mailto:legal@patibul.com">legal@patibul.com</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
