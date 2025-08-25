@@ -58,9 +58,9 @@ HTML dosyalarındaki metinleri doğrudan düzenleyebilirsiniz.
 
 ## 📞 İletişim
 
-- **Genel İletişim**: info@patibul.com
-- **Teknik Destek**: tech@patibul.com
-- **Yasal Konular**: legal@patibul.com
+- **Genel İletişim**: patibul0101@gmail.com 
+- **Teknik Destek**: patibul0101@gmail.com 
+- **Yasal Konular**: patibul0101@gmail.com 
 
 ## 📄 Lisans
 
